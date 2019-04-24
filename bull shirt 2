@@ -1,0 +1,65 @@
+├─Excel2Script
+│  │  App.config
+│  │  Component.cs
+│  │  Excel2Script.csproj
+│  │  Excel2Script.csproj.user
+│  │  MainForm.cs
+│  │  MainForm.Designer.cs
+│  │  MainForm.resx
+│  │  Program.cs
+│  │  RunningForm.cs
+│  │  RunningForm.Designer.cs
+│  │  RunningForm.resx
+│  ├─Helper
+│  │      CSVFileHelper.cs
+│  │      DomainKeyWord.cs
+│  │      InitHelper.cs
+│  │      TCScriptCreat.cs
+│  │      
+│  ├─Image
+│  │      Processing.gif
+│  │      
+│  ├─MACHINE
+│  │      CommonXlsOperationNpoi.cs
+│  │      New.cs
+│  │      
+│  ├─MODEL
+│  │      ButtionTitleInfo.cs
+│  │      ButtonInfo.cs
+│  │      ConditionInfo.cs
+│  │      MccInfo.cs
+│  │      NodeInfo.cs
+│  │      OneSheetInfo.cs
+│  │      OptionInfo.cs
+│  │      
+│  ├─NPOI
+│  │      ExcelHelper.cs
+│  │      ExcelOperation.cs
+│  │      IExcelOperation.cs
+│  │          
+│  └─Properties
+│          AssemblyInfo.cs
+│          Resources.Designer.cs
+│          Resources.resx
+│          Settings.Designer.cs
+│          Settings.settings
+│          
+└─Excel2ScriptCSV
+    │  App.config
+    │  CSVFileHelper.cs
+    │  InitHelper.cs
+    │  Program.cs
+    │  ScriptExcel2ScriptCSV.csproj
+    │  ScriptExcel2ScriptCSV.csproj.user
+    │          
+    └─Properties
+            AssemblyInfo.cs
+
+│          
+└─.bat
+@echo off
+TITLE Build Excel2Script && COLOR 3F
+call "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat"
+MSBuild Excel2Script.sln /t:rebuild /p:Configuration=Debug
+MSBuild Excel2Script.sln /t:rebuild /p:Configuration=Release
+PAUSE
