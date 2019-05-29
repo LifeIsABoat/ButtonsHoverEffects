@@ -1,0 +1,18 @@
+            List<string> currentWord = new List<string>() { "0", "1", "2", "3" };
+            List<string> ftbButtonWord = new List<string>() { "0", "2", "3", "1"};
+            if (currentWord.All(ftbButtonWord.Contains) && currentWord.Count == ftbButtonWord.Count)
+            {
+                int index = ftbButtonWord.FindIndex(s => s == currentWord[0]);
+                for (int i = 0; i < currentWord.Count; i++)
+                {
+                    if (currentWord[i] != ftbButtonWord[index])
+                    {
+                        
+                    }
+                    index++;
+                    if (index >= ftbButtonWord.Count)
+                    {
+                        index = 0;
+                    }
+                }
+            }
